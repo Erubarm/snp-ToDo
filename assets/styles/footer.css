@@ -62,3 +62,7 @@ footer {
     border-bottom: 2px solid;
   }
 }
+.footer-inner .button__clear-completed:active {
+  color: var(--orange-200);
+  border-bottom: 2px solid var(--orange-200);
+}
