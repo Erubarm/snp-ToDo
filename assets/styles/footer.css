@@ -13,6 +13,17 @@ footer {
   gap: 4px;
   text-align: center;
 }
+@media (min-width: 1024px) {
+  .footer-inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 .footer-inner span {
   color: var(--gray-300);
 }
@@ -32,10 +43,22 @@ footer {
           align-items: center;
   gap: 8px;
 }
-.footer-inner .block-filter-buttons button:hover {
-  border-bottom: 2px solid;
+@media (min-width: 1024px) {
+  .footer-inner .block-filter-buttons {
+    gap: 12px;
+  }
+}
+@media (hover: hover) {
+  .footer-inner .block-filter-buttons button:hover {
+    border-bottom: 2px solid;
+  }
 }
 .footer-inner .block-filter-buttons .filter-button__focus {
   color: var(--orange-200);
   border-bottom: 2px solid var(--orange-200);
+}
+@media (hover: hover) {
+  .footer-inner .button__clear-completed:hover {
+    border-bottom: 2px solid;
+  }
 }

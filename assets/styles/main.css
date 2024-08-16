@@ -34,14 +34,21 @@ main {
   border: none;
   outline: none;
 }
+@media (min-width: 1024px) {
+  .main-inner .block-input {
+    padding: 18px;
+  }
+  .main-inner .block-input button img {
+    width: 28px;
+  }
+}
 @media (hover: hover) {
   .main-inner .block-input:hover {
     background: var(--beige-200);
     border: 1px solid var(--beige-200);
   }
-  .main-inner button:hover img {
-    width: 24px;
-    height: 18px;
+  .main-inner .block-input button:hover img {
+    width: 32px;
   }
 }
 .main-inner ul {
@@ -74,6 +81,14 @@ main {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+@media (min-width: 1024px) {
+  .main-inner ul li {
+    padding: 14px;
+  }
+  .main-inner ul li button img {
+    width: 22px;
+  }
+}
 .main-inner ul li label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,6 +103,11 @@ main {
           align-items: center;
   cursor: pointer;
 }
+@media (min-width: 1024px) {
+  .main-inner ul li label {
+    gap: 12px;
+  }
+}
 .main-inner ul li label input[type=checkbox] {
   display: none;
 }
@@ -101,6 +121,12 @@ main {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+@media (min-width: 1024px) {
+  .main-inner ul li label .custom-radio {
+    width: 22px;
+    height: 22px;
+  }
+}
 .main-inner ul li label .custom-radio::after {
   content: "";
   position: absolute;
@@ -113,6 +139,12 @@ main {
   width: 10px;
   background-color: black;
   border-radius: 50%;
+}
+@media (min-width: 1024px) {
+  .main-inner ul li label .custom-radio::after {
+    width: 12px;
+    height: 12px;
+  }
 }
 .main-inner ul li label input[type=checkbox]:checked + .custom-radio::after {
   display: block;

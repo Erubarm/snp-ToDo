@@ -25,6 +25,16 @@ main {
 			border: none;
 			outline: none;
 		}
+
+		@media (min-width: 1024px) {
+			padding: 18px;
+
+			button {
+				img {
+					width: 28px;
+				}
+			}
+		}
 	}
 
 	@media (hover: hover) {
@@ -33,10 +43,11 @@ main {
 			border: 1px solid var(--beige-200);
 		}
 
-		button:hover {
-			img {
-				width: 24px;
-				height: 18px;
+		.block-input {
+			button:hover {
+				img {
+					width: 32px;
+				}
 			}
 		}
 	}
@@ -60,11 +71,25 @@ main {
 			padding: 8px;
 			border-radius: 10px;
 
+			@media (min-width: 1024px) {
+				padding: 14px;
+
+				button {
+					img {
+						width: 22px;
+					}
+				}
+			}
+
 			label {
 				display: flex;
 				flex-direction: row;
 				gap: 5px;
 				align-items: center;
+
+				@media (min-width: 1024px) {
+					gap: 12px;
+				}
 
 				cursor: pointer;
 
@@ -80,6 +105,11 @@ main {
 					border: 2px solid var(--black);
 					border-radius: 50%;
 					transition: all 0.3s ease;
+
+					@media (min-width: 1024px) {
+						width: 22px;
+						height: 22px;
+					}
 				}
 
 				.custom-radio::after {
@@ -93,6 +123,11 @@ main {
 					width: 10px;
 					background-color: black;
 					border-radius: 50%;
+
+					@media (min-width: 1024px) {
+						width: 12px;
+						height: 12px;
+					}
 				}
 
 				input[type='checkbox']:checked + .custom-radio::after {
