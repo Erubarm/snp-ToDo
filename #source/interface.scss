@@ -1,0 +1,116 @@
+:root {
+	--white: #ffff;
+	--black: #1b1f2b;
+	--beige-100: #f9f7f4;
+	--beige-200: #f4f0e9;
+	--gray-100: #f1f3f2;
+	--gray-300: #a6a6a6;
+	--orange-200: #efa501;
+
+	--font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+	background: var(--beige-100);
+}
+
+@media (min-width: 360px) {
+	h1 {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 56px;
+		line-height: 112%;
+		letter-spacing: 0.02em;
+		color: var(--black);
+	}
+}
+@media (min-width: 1024px) {
+	h1 {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 96px;
+		line-height: 109%;
+		letter-spacing: normal;
+		color: var(--black);
+	}
+}
+
+@mixin p-big {
+	font-family: var(--font-family);
+	font-weight: 700;
+	font-size: 23px;
+	line-height: 122%;
+	color: var(--black);
+	// letter-spacing: normal;
+}
+
+.p-big {
+	@include p-big();
+}
+
+@media (min-width: 360px) {
+	.p-normal {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 142%;
+		color: var(--black);
+	}
+}
+@media (min-width: 1024px) {
+	.p-normal {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 142%;
+		color: var(--black);
+	}
+}
+
+@media (min-width: 360px) {
+	.p-small {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 142%;
+		letter-spacing: -0.01em;
+		color: var(--black);
+	}
+}
+@media (min-width: 1024px) {
+	.p-small {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 142%;
+		letter-spacing: -0.01em;
+		color: var(--black);
+	}
+}
+
+.container {
+	@media (min-width: 360px) {
+		max-width: 310px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	@media (min-width: 576px) {
+		max-width: 540px;
+	}
+
+	@media (min-width: 768px) {
+		max-width: 720px;
+	}
+	@media (min-width: 1024px) {
+		max-width: 910px;
+	}
+	@media (min-width: 1200px) {
+		max-width: 1140px;
+	}
+
+	@media (min-width: 1920) {
+		max-width: 1170px;
+	}
+}

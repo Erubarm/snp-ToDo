@@ -1,0 +1,32 @@
+footer {
+	margin-top: 24px;
+}
+
+.footer-inner {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+
+	text-align: center;
+
+	span {
+		color: var(--gray-300);
+	}
+
+	.block-filter-buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+
+		button:hover {
+			border-bottom: 2px solid;
+		}
+
+		.filter-button__focus {
+			color: var(--orange-200);
+			border-bottom: 2px solid var(--orange-200);
+		}
+	}
+}

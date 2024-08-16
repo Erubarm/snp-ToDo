@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/styles/index.css" />
+		<title>SNP-TODO</title>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>To-Do SNP</h1>
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<div class="main-inner">
+					<div class="block-input">
+						<input
+							type="text"
+							placeholder="Что нужно выполнить"
+							id="inputText"
+							class="p-normal block-input__main-input"
+						/>
+						<button>
+							<img src="./assets/icons/arrow.svg" alt="arrow" />
+						</button>
+					</div>
+					<ul class="todo-list p-normal">
+						<li class="todo-item">
+							<label for="todo-item1" class="todo-item__block-text-radio">
+								<input type="checkbox" name="todo-item1" id="todo-item1" />
+								<span class="custom-radio"></span>
+								<p>Примерная тудушка</p>
+							</label>
+
+							<button class="todo-item__cross">
+								<img src="./assets/icons/cross.svg" alt="cross" />
+							</button>
+						</li>
+						<li class="todo-item">
+							<label for="todo-item2" class="todo-item__block-text-radio">
+								<input type="checkbox" name="todo-item2" id="todo-item2" />
+								<span class="custom-radio"></span>
+								<p>Примерная тудушка</p>
+							</label>
+
+							<button class="todo-item__cross">
+								<img src="./assets/icons/cross.svg" alt="cross" />
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="footer-inner">
+					<span class="p-small">1 задача не выполнена</span>
+					<div class="block-filter-buttons">
+						<button class="p-small filter-button__focus">Все</button>
+						<button class="p-small">Активные</button>
+						<button class="p-small">Выполненные</button>
+					</div>
+
+					<button class="button__clear-completed p-small">
+						Очистить выполненные
+					</button>
+				</div>
+			</div>
+		</footer>
+		<script src="./assets/scripts/main.js"></script>
+		<script src="./assets/scripts/footer.js"></script>
+	</body>
+</html>
