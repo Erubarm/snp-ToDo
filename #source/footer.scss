@@ -5,6 +5,7 @@ footer {
 .footer-inner {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	gap: 4px;
 
 	@media (min-width: 1024px) {
@@ -39,6 +40,10 @@ footer {
 			color: var(--orange-200);
 			border-bottom: 2px solid var(--orange-200);
 		}
+	}
+
+	.button__clear-completed {
+		width: fit-content;
 	}
 
 	@media (hover: hover) {

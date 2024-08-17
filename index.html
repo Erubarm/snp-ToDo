@@ -41,7 +41,7 @@
 								<p>Примерная тудушка</p>
 							</label>
 
-							<button class="todo-item__cross">
+							<button class="todo-item__cross" id="buttonCrossDelete">
 								<img src="./assets/icons/cross.svg" alt="cross" />
 							</button>
 						</li>
@@ -52,7 +52,7 @@
 								<p>Примерная тудушка</p>
 							</label>
 
-							<button class="todo-item__cross">
+							<button class="todo-item__cross" id="buttonCrossDelete">
 								<img src="./assets/icons/cross.svg" alt="cross" />
 							</button>
 						</li>
@@ -63,14 +63,19 @@
 		<footer>
 			<div class="container">
 				<div class="footer-inner">
-					<span class="p-small">1 задача не выполнена</span>
+					<span class="p-small" id="counterTodos">1 задача не выполнена</span>
 					<div class="block-filter-buttons">
-						<button class="p-small filter-button__focus">Все</button>
-						<button class="p-small">Активные</button>
-						<button class="p-small">Выполненные</button>
+						<button class="p-small filter-button__focus" id="showAllList">
+							Все
+						</button>
+						<button class="p-small" id="showActiveTodos">Активные</button>
+						<button class="p-small" id="showCompletedTodos">Выполненные</button>
 					</div>
 
-					<button class="button__clear-completed p-small">
+					<button
+						class="button__clear-completed p-small"
+						id="buttonClearCompletedAll"
+					>
 						Очистить выполненные
 					</button>
 				</div>

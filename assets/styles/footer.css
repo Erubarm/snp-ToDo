@@ -10,6 +10,9 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 4px;
   text-align: center;
 }
@@ -56,6 +59,11 @@ footer {
 .footer-inner .block-filter-buttons .filter-button__focus {
   color: var(--orange-200);
   border-bottom: 2px solid var(--orange-200);
+}
+.footer-inner .button__clear-completed {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 @media (hover: hover) {
   .footer-inner .button__clear-completed:hover {
