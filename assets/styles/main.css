@@ -55,14 +55,17 @@ main {
   background-color: var(--white);
   border-radius: 10px;
   padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
+}
+.main-inner ul.has-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .main-inner ul li {
   display: -webkit-box;
@@ -75,6 +78,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 8px;
   border: 2px solid var(--gray-100);
   padding: 8px;
   border-radius: 10px;
@@ -120,6 +124,8 @@ main {
   border-radius: 50%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 @media (min-width: 1024px) {
   .main-inner ul li label .custom-radio {
@@ -158,6 +164,12 @@ main {
 }
 .main-inner ul li label input[type=checkbox]:checked + .custom-radio::after {
   background-color: var(--gray-300);
+}
+.main-inner ul li label .edit-input {
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid var(--orange-200);
 }
 .main-inner ul li button {
   background-color: inherit;

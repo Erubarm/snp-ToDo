@@ -1,6 +1,4 @@
-const buttons = document
-	.querySelector('.block-filter-buttons')
-	.querySelectorAll('button')
+const buttons = document.querySelectorAll('.block-filter-buttons button')
 
 const countTodo = document.getElementById('counterTodos')
 let todoList = document.querySelector('.todo-list')
@@ -11,7 +9,6 @@ const buttonShowCompletedTodos = document.getElementById('showCompletedTodos')
 const buttonClearCompletedTodosAll = document.getElementById(
 	'buttonClearCompletedAll'
 )
-const buttonsCrossDelete = document.querySelectorAll('.todo-item__cross')
 
 function updateActiveTodoCount() {
 	const countActiveTodos = Array.from(liItems).filter(
@@ -42,12 +39,13 @@ function applyFilter(filter) {
 
 function clearCompletedTodos() {
 	liItems.forEach(item => {
-		const isChecked = document.querySelector('label input').checked
+		const isChecked = item.querySelector('label input').checked
 		if (isChecked) item.remove()
 	})
 
 	liItems = document.querySelectorAll('.todo-item')
 	updateActiveTodoCount()
+	updateListDisplay()
 }
 
 liItems.forEach(item => {
@@ -55,6 +53,14 @@ liItems.forEach(item => {
 	checkbox.addEventListener('change', () => {
 		updateActiveTodoCount()
 		applyFilter(currentFilter)
+	})
+
+	const deleteCross = item.querySelector('.todo-item__cross')
+	deleteCross.addEventListener('click', () => {
+		item.remove()
+		liItems = document.querySelectorAll('.todo-item')
+		updateActiveTodoCount()
+		updateListDisplay()
 	})
 })
 
@@ -75,16 +81,6 @@ buttonShowCompletedTodos.addEventListener('click', () => {
 
 buttonClearCompletedTodosAll.addEventListener('click', () => {
 	clearCompletedTodos()
-})
-
-buttonsCrossDelete.forEach(button => {
-	button.addEventListener('click', () => {
-		const todoItem = button.closest('.todo-item')
-		todoItem.remove()
-
-		liItems = document.querySelectorAll('.todo-item')
-		updateActiveTodoCount()
-	})
 })
 
 buttons.forEach(item => {
